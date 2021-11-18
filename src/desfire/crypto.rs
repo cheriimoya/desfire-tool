@@ -12,4 +12,4 @@ fn generate_new_aes_key () -> Vec<u8> {
   r.fill_bytes(&mut key);
 
   return key
-} 
+}

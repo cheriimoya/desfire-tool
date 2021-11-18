@@ -11,10 +11,10 @@ pub struct DesFire {
 }
 
 impl DesFire {
-  
+
   pub fn initialize () -> DesFire {
     let mut context = nfc::context::new();
-    
+
     if context.is_null() {
         panic!("Unable to initialize new NFC context!");
     }
@@ -35,7 +35,7 @@ impl DesFire {
       let tags = unsafe { std::slice::from_raw_parts(freefare::get_tags(device), 1) };
       return DesFire { device: device, context: context, tag: tags[0] }
     }
-    
+
     panic!("Could not initialize NFC Library!")
   }
 

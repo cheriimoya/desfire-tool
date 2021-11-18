@@ -19,7 +19,7 @@ pub fn get_card_info() -> CardInfo {
   if res < 0 { size = 0; }
   let mut info = freefare_sys::Struct_mifare_desfire_version_info { ..Default::default() };
   let res = mifare::desfire_get_version(desfire.tag, &mut info);
-  desfire.destruct(); 
+  desfire.destruct();
   CardInfo {
     free_memory: size,
     card_version: info.hardware.version_major,

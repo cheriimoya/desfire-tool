@@ -15,5 +15,4 @@ pub fn personalize() {
 struct PersonalizationSettings {
   generate_master_key: bool,
   app_create_needs_master: bool,
-  
 }

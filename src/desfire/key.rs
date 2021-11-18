@@ -5,7 +5,7 @@ use super::DesFire;
 
 pub fn change_key(aid: u8, kid: u8, mut key_old: [u8; 16usize], mut key_new: [u8; 16usize], version: Option<u8>) {
   let desfire = DesFire::initialize();
-  desfire.connect(); 
+  desfire.connect();
   desfire.authenticate(kid, key_old, version);
   let key_new = mifare::desfire_aes_key_new_with_version(&mut key_new[0], version.unwrap_or_else(|| 0) + 1);
   let key_old = mifare::desfire_aes_key_new_with_version(&mut key_old[0], version.unwrap_or_else(|| 0));
@@ -17,13 +17,13 @@ pub fn change_key(aid: u8, kid: u8, mut key_old: [u8; 16usize], mut key_new: [u8
 
 pub fn add_key(aid: u8, kid: u8, mut key_old: [u8; 16usize], mut key_new: [u8; 16usize], version: Option<u8>) {
   let desfire = DesFire::initialize();
-  desfire.connect(); 
+  desfire.connect();
   desfire.authenticate(kid, key_old, version);
   //let mut aids;
   let mut count: usize = 0;
   //mifare::desfire_get_application_ids(desfire.tag, &mut aids, &mut count);
   //let aids = unsafe { std::slice::from_raw_parts(aids, count); }
-  
+
   // mifare::desfire_select_application(desfire.tag, aid);
   let key_new = mifare::desfire_aes_key_new_with_version(&mut key_new[0], version.unwrap_or_else(|| 0) + 1);
   let key_old = mifare::desfire_aes_key_new_with_version(&mut key_old[0], version.unwrap_or_else(|| 0));
