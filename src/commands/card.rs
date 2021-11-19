@@ -11,11 +11,11 @@ pub fn card(command: CardCommand) {
 }
 
 fn configure() {
-
+    panic!("card::configure Not implemented");
 }
 
 fn format() {
-
+    panic!("card::format Not implemented");
 }
 
 fn info() {

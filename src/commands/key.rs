@@ -13,13 +13,21 @@ pub fn key(command: KeyCommand, aid: u8) {
     }
 }
 
-fn add (aid: u8, kid: u8) {}
+fn add(aid: u8, kid: u8) {
+    panic!("key::add Not implemented, aid: {}, kid: {}", aid, kid);
+}
 
-fn change (aid: u8, kid: u8) {}
+fn change(aid: u8, kid: u8) {
+    panic!("key::change Not implemented, aid: {}, kid: {}", aid, kid);
+}
 
-fn configure (aid: u8, kid: u8) {}
+fn configure(aid: u8, kid: u8) {
+    panic!("key::configure Not implemented, aid: {}, kid: {}", aid, kid);
+}
 
-fn remove (aid: u8, kid: u8) {}
+fn remove(aid: u8, kid: u8) {
+    panic!("key::remove Not implemented, aid: {}, kid: {}", aid, kid);
+}
 
 fn info(aid: u8, kid: u8) {
     let key_settings = get_key_settings(aid, kid);
@@ -42,4 +50,6 @@ fn info(aid: u8, kid: u8) {
     );
 }
 
-fn list () {}
+fn list() {
+    panic!("key::list Not implemented");
+}

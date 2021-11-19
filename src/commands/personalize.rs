@@ -12,6 +12,7 @@ pub fn personalize() {
     let list_needs_master: bool =
         ask_bool("Should you need the Master Key to list Applications? [yes|no]: ");
 
+    panic!("personalize::personalize Not fully implemented");
 }
 
 struct PersonalizationSettings {
