@@ -25,7 +25,7 @@ As a start, place your tag on your reader and run
 desfire-tool card info
 ```
 
-You can display a list of commands by running 
+You can display a list of commands by running
 
 ```bash
 desfire-tool help
