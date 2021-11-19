@@ -1,11 +1,11 @@
-mod desfire;
-mod crypto;
-mod card;
-mod key;
 mod application;
+mod card;
+mod crypto;
+mod desfire;
+mod key;
 
-use desfire::*;
-use crypto::*;
-pub use card::*;
-pub use key::*;
 pub use application::*;
+pub use card::*;
+use crypto::*;
+use desfire::*;
+pub use key::*;

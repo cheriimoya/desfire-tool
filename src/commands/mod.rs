@@ -1,13 +1,13 @@
 mod helper;
 
-mod personalize;
 mod application;
 mod card;
-mod key;
 mod file;
+mod key;
+mod personalize;
 
-pub use personalize::personalize;
 pub use application::application;
-pub use key::key;
-pub use file::file;
 pub use card::card;
+pub use file::file;
+pub use key::key;
+pub use personalize::personalize;
